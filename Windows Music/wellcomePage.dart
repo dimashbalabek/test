@@ -1,31 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_lvl2_preperation/loginPage.dart';
+import 'package:lvl4_flutter_demo_practise/Sign_In_Page.dart';
 
-class WellcomePage extends StatefulWidget {
+class WellcomePage extends StatelessWidget {
   const WellcomePage({super.key});
 
   @override
-  State<WellcomePage> createState() => _WellcomePageState();
-}
-
-class _WellcomePageState extends State<WellcomePage> {
-  @override
   Widget build(BuildContext context) {
+    Future.delayed(const Duration(seconds: 1), (){Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){ return RegisterPage();}));});
     return Scaffold(
-      body: GestureDetector(
-        onTap: () {
-          Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){return LoginPage();}));},
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("Wellcome to"),
-              Text("USED ZIP", style: TextStyle(fontWeight: FontWeight.w900),),
-              Image.asset("assets/shop.jpg"),
-              Text("Best used trading anywhere in the world")
-            ],
-          ),
-        ),
+      body: Center(
+        child: Image.network("assets/arl.png"),
       ),
     );
   }

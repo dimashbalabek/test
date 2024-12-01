@@ -1,25 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_lvl2_preperation/HomeScreen.dart';
-
-import 'package:flutter_lvl2_preperation/wellcomePage.dart';
+import 'package:lvl4_flutter_demo_practise/HomePage.dart';
+import 'package:lvl4_flutter_demo_practise/RegisterPage.dart';
+import 'package:lvl4_flutter_demo_practise/Sign_In_Page.dart';
+import 'package:lvl4_flutter_demo_practise/TaskerProfile.dart';
+import 'package:lvl4_flutter_demo_practise/WellcomePage.dart';
 
 void main() {
   runApp(const MyApp());
 }
-
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: MyWidget(),
     );
-  }
-}
+  }  
+} 
